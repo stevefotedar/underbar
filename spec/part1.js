@@ -342,7 +342,7 @@
         expect(_.uniq(numbers)).to.eql([1, 2, 3, 4]);
       });
 
-      xit('should handle iterators that work with a sorted array', function() {
+      it('should handle iterators that work with a sorted array', function() {
         var iterator = function(value) { return value === 1; };
         var numbers = [1, 2, 2, 3, 4, 4];
 
@@ -356,7 +356,7 @@
         expect(uniqueNumbers).to.not.equal(numbers);
       });
       
-      xit('should maintain same array length', function() {
+      it('should maintain same array length', function() {
         var numbers = [1, 1, 2, 3];
         var shuffled = _.shuffle(numbers);
 
