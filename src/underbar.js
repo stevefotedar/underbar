@@ -329,7 +329,7 @@
   _.memoize = function(func) {
     var results = {};
     return function() {
-      var args = [...arguments].join("");
+      var args = [...arguments].join("$");
       if (!(results.hasOwnProperty(args))) {
         results[args] = func.apply(this, arguments);
       }
